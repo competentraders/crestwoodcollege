@@ -587,32 +587,46 @@ header{
 
 flex-direction:column-reverse; /* Places nav at the top of the logo */
 
-padding:10px;
+padding:15px 10px;
 
+}
+
+nav{
+width: 100%;
 }
 
 nav ul{
 
 flex-direction:row; /* Keeps links horizontal */
-flex-wrap: wrap;     /* Ensures layout doesn't break on narrow views */
-justify-content:center;
+flex-wrap: nowrap;  /* Prevents breaking into multiple lines */
+overflow-x: auto;   /* Enables smooth swiping/scrolling if links exceed screen width */
+justify-content: space-between;
 
 align-items:center;
 
 margin-top:0;
-margin-bottom:20px; /* Spaces links away from the logo below it */
+margin-bottom:15px; /* Spaces links away from the logo below it */
 
-gap:12px;
+gap:6px; /* Reduced layout spacing to fit closely together */
+padding: 5px 0;
 
+-webkit-overflow-scrolling: touch;
+scrollbar-width: none; /* Hides horizontal scrollbar bar on Firefox */
 }
 
-/* Adds background blocks to each link element in mobile view */
+nav ul::-webkit-scrollbar {
+    display: none; /* Hides horizontal scrollbar bar on Chrome/Safari/Edge */
+}
+
+/* Slimmed down background blocks for each link element */
 nav ul li a{
 background:#C9A227;
 color:#111;
-padding:8px 14px;
-border-radius:6px;
-font-weight:100;
+padding: 5px 10px; /* Minimal padding for a smaller, tighter button structure */
+border-radius:4px;
+font-weight:600;
+font-size: 11px; /* Scaled down typography size to sit perfectly in view */
+white-space: nowrap; /* Ensures long item text never snaps downward */
 }
 
 nav ul li a:hover{
