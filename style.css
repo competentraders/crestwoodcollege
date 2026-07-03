@@ -587,7 +587,7 @@ header{
 
 flex-direction:column-reverse; /* Places nav at the top of the logo */
 
-padding:20px;
+padding:10px;
 
 }
 
@@ -612,7 +612,7 @@ background:#C9A227;
 color:#111;
 padding:8px 14px;
 border-radius:6px;
-font-weight:600;
+font-weight:100;
 }
 
 nav ul li a:hover{
