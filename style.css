@@ -585,7 +585,7 @@ transform:translateY(0);
 
 header{
 
-flex-direction:column;
+flex-direction:column-reverse; /* Places nav at the top of the logo */
 
 padding:20px;
 
@@ -593,14 +593,31 @@ padding:20px;
 
 nav ul{
 
-flex-direction:column;
+flex-direction:row; /* Keeps links horizontal */
+flex-wrap: wrap;     /* Ensures layout doesn't break on narrow views */
+justify-content:center;
 
 align-items:center;
 
-margin-top:20px;
+margin-top:0;
+margin-bottom:20px; /* Spaces links away from the logo below it */
 
-gap:15px;
+gap:12px;
 
+}
+
+/* Adds background blocks to each link element in mobile view */
+nav ul li a{
+background:#C9A227;
+color:#111;
+padding:8px 14px;
+border-radius:6px;
+font-weight:600;
+}
+
+nav ul li a:hover{
+background:#ffffff;
+color:#C9A227;
 }
 
 .hero{
